@@ -1,0 +1,14 @@
+# No third-party packages are required.
+# The project uses only the Python standard library:
+#
+#   socket     - TCP sockets
+#   threading  - one thread per connection
+#   json       - application-level message encoding
+#   struct     - 4-byte length prefix for message framing
+#   uuid       - short unique peer IDs
+#   os         - file paths and the downloads directory
+#   queue      - thread-safe handoff of log lines to the GUI
+#   tkinter    - graphical interface (bundled with Python on Windows/macOS;
+#                on Debian/Ubuntu install with: sudo apt install python3-tk)
+#
+# Python 3.9 or later.
