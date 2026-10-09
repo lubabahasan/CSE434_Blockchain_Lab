@@ -48,7 +48,7 @@ sudo apt install python3-tk
 ## 3. Project Structure
 
 ```
-P2P_Network/
+22201134_AB2_P2P_Assignment/
 |
 |-- main.py            User interface (Tkinter) and user interaction
 |-- p2p_node.py        Peer networking: connections, text, file transfer
@@ -147,7 +147,7 @@ All three peers were run on a single computer using the loopback address `127.0.
 
 Peer A is started with the name `Alice` and listening port `5000`. The identity line under the input fields shows the name, the generated 8-character peer ID and the port the peer is now listening on.
 
-![Demo 1 - Peer A started as Alice on port 5000](screenshots/demo-1.png)
+![Demo 1 - Peer A started as Alice on port 5000](22201134_AB2_P2P_Assignment/screenshots/demo-1.png)
 
 ### Demo 2 - Start Peer B
 
@@ -155,7 +155,7 @@ A second instance of the application is started as `Bob` on port `5001`. A
 different port is required because only one listening socket can bind a given
 port on the same machine.
 
-![Demo 2 - Peer B started as Bob on port 5001](screenshots/demo-2.png)
+![Demo 2 - Peer B started as Bob on port 5001](22201134_AB2_P2P_Assignment/screenshots/demo-2.png)
 
 ### Demo 3 & 4 - Connect Peer B to Peer A, Show the Connected Peer List
 
@@ -165,21 +165,21 @@ and address. Alice's list is populated even though Bob initiated the
 connection, because the HELLO / HELLO_ACK handshake carries identity
 information in both directions.
 
-![Demo 3, 4 - Bob connecting to Alice at 127.0.0.1:5000](screenshots/demo-3-4.png)
+![Demo 3, 4 - Bob connecting to Alice at 127.0.0.1:5000](22201134_AB2_P2P_Assignment/screenshots/demo-3-4.png)
 
 ### Demo 5 - Send a Text Message from A to B
 
 Alice selects Bob in the peer list and sends a text message. The sender logs
 `You -> Bob: ...` and the receiver logs `Alice -> You: ...`.
 
-![Demo 5 - Text message sent from Alice to Bob](screenshots/demo-5.png)
+![Demo 5 - Text message sent from Alice to Bob](22201134_AB2_P2P_Assignment/screenshots/demo-5.png)
 
 ### Demo 6 - Send a Text Message from B to A
 
 Bob replies to Alice over the same TCP connection, confirming that
 communication is bidirectional rather than request–response.
 
-![Demo 6 - Text message sent from Bob to Alice](screenshots/demo-6.png)
+![Demo 6 - Text message sent from Bob to Alice](22201134_AB2_P2P_Assignment/screenshots/demo-6.png)
 
 ### Demo 7, 8 & 9 - Send an Image, Audio, and Video File from A to B
 
@@ -188,14 +188,14 @@ followed by the raw bytes. Bob writes the result into the `downloads/` folder. B
 than loading it into memory, and the receiver reads exactly the number of bytes
 given in the metadata before closing the file.
 
-![Demo 7, 8, 9 - Image, Audio, Video file transferred from Alice to Bob](screenshots/demo-7-8-9.png)
+![Demo 7, 8, 9 - Image, Audio, Video file transferred from Alice to Bob](22201134_AB2_P2P_Assignment/screenshots/demo-7-8-9.png)
 
 ### Demo 10 - Start Peer C
 
 A third peer, `Charlie`, is started on port `5002` while Alice and Bob remain
 connected and running.
 
-![Demo 10 - Peer C started as Charlie on port 5002](screenshots/demo-10.png)
+![Demo 10 - Peer C started as Charlie on port 5002](22201134_AB2_P2P_Assignment/screenshots/demo-10.png)
 
 ### Demo 11 - Connect Peer C to the Network
 
@@ -203,7 +203,7 @@ Charlie connects to Alice on port 5000 and to Bob on port 5001, giving Charlie
 two independent connections, each served by its own receive thread. All three
 peer lists now show two entries.
 
-![Demo 11 - Charlie connected to both Alice and Bob](screenshots/demo-11.png)
+![Demo 11 - Charlie connected to both Alice and Bob](22201134_AB2_P2P_Assignment/screenshots/demo-11.png)
 
 ### Demo 12 - Communication Involving Peer C
 
@@ -211,4 +211,4 @@ Messages and a file are exchanged between Charlie and the other two peers,
 demonstrating that a single peer can maintain and communicate over several
 connections at once without any central server.
 
-![Demo 12 - Messages and file transfer between Charlie and the other peers](screenshots/demo-12.png)
+![Demo 12 - Messages and file transfer between Charlie and the other peers](22201134_AB2_P2P_Assignment/screenshots/demo-12.png)
